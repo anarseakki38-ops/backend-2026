@@ -1,0 +1,89 @@
+[ {
+  "id" : "56d2f521-1200-4c42-a68c-cd60781f5d7b",
+  "jobId" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67",
+  "jobName" : "Customer Registration",
+  "fileName" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_141851.xlsx",
+  "filePath" : "data\\reports\\2025-12-20\\e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_141851.xlsx",
+  "generatedAt" : 1766220531743,
+  "status" : "SUCCESS",
+  "rowCount" : 1514,
+  "fileSizeBytes" : 54840,
+  "errorMessage" : null
+}, {
+  "id" : "f81a0ca7-5ac2-4c47-b64d-acdb8a2d2bb1",
+  "jobId" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "jobName" : "Transaction Report",
+  "fileName" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16_20251220_142047.xlsx",
+  "filePath" : "data\\reports\\2025-12-20\\aa75a173-51a4-4d72-8dc1-5b3072e8da16_20251220_142047.xlsx",
+  "generatedAt" : 1766220647807,
+  "status" : "SUCCESS",
+  "rowCount" : 1514,
+  "fileSizeBytes" : 54841,
+  "errorMessage" : null
+}, {
+  "id" : "7fa68726-39ed-4dd4-816d-0d8aaf8e4f45",
+  "jobId" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "jobName" : "Transaction Report",
+  "fileName" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16_20251220_142200.xlsx",
+  "filePath" : "data\\reports\\2025-12-20\\aa75a173-51a4-4d72-8dc1-5b3072e8da16_20251220_142200.xlsx",
+  "generatedAt" : 1766220720000,
+  "status" : "SUCCESS",
+  "rowCount" : 1514,
+  "fileSizeBytes" : 54839,
+  "errorMessage" : null
+}, {
+  "id" : "730a23a4-03f8-49ef-9ee6-42c70e29a39d",
+  "jobId" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67",
+  "jobName" : "Customer Registration",
+  "fileName" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_152711.xlsx",
+  "filePath" : "data\\reports\\2025-12-20\\e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_152711.xlsx",
+  "generatedAt" : 1766224630976,
+  "status" : "SUCCESS",
+  "rowCount" : 1514,
+  "fileSizeBytes" : 54840,
+  "errorMessage" : null
+}, {
+  "id" : "56899998-5651-4146-b7fa-3ae6a898a49f",
+  "jobId" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "jobName" : "Transaction Report",
+  "fileName" : "FAILED",
+  "filePath" : "",
+  "generatedAt" : 1766224726477,
+  "status" : "FAILED",
+  "rowCount" : 0,
+  "fileSizeBytes" : 0,
+  "errorMessage" : "Cannot invoke \"String.isEmpty()\" because \"segment\" is null"
+}, {
+  "id" : "85e0c4e7-0578-406f-9c3c-241dff464172",
+  "jobId" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "jobName" : "Transaction Report",
+  "fileName" : "FAILED",
+  "filePath" : "",
+  "generatedAt" : 1766225959474,
+  "status" : "FAILED",
+  "rowCount" : 0,
+  "fileSizeBytes" : 0,
+  "errorMessage" : "Cannot invoke \"String.isEmpty()\" because \"segment\" is null"
+}, {
+  "id" : "9a7d66be-f2d3-432d-9c12-deca20120ae8",
+  "jobId" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "jobName" : "Transaction Report",
+  "fileName" : "FAILED",
+  "filePath" : "",
+  "generatedAt" : 1766226748852,
+  "status" : "FAILED",
+  "rowCount" : 0,
+  "fileSizeBytes" : 0,
+  "errorMessage" : "SQL file name is missing in job configuration"
+}, {
+  "id" : "5a52fe0d-7afe-4879-8eed-56c61360390c",
+  "jobId" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67",
+  "jobName" : "Customer Registration",
+  "fileName" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_160250.xlsx",
+  "filePath" : "data\\reports\\2025-12-20\\e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_160250.xlsx",
+  "generatedAt" : 1766226770546,
+  "status" : "SUCCESS",
+  "rowCount" : 1514,
+  "fileSizeBytes" : 54839,
+  "errorMessage" : null
+} ]
