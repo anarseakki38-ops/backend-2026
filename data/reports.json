@@ -86,4 +86,15 @@
   "rowCount" : 1514,
   "fileSizeBytes" : 54839,
   "errorMessage" : null
+}, {
+  "id" : "7db1e4d4-fa03-4316-9c1d-4a80c23d0d40",
+  "jobId" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67",
+  "jobName" : "Customer Registration",
+  "fileName" : "e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_192300.xlsx",
+  "filePath" : "data\\reports\\2025-12-20\\e11a8924-f4ad-4b5b-ad45-8b5d2df84e67_20251220_192300.xlsx",
+  "generatedAt" : 1766238780004,
+  "status" : "SUCCESS",
+  "rowCount" : 1514,
+  "fileSizeBytes" : 54839,
+  "errorMessage" : null
 } ]
