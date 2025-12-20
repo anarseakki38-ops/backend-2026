@@ -97,4 +97,15 @@
   "rowCount" : 1514,
   "fileSizeBytes" : 54839,
   "errorMessage" : null
+}, {
+  "id" : "1d85d24e-e370-4c47-bcfa-f04067098b6c",
+  "jobId" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "jobName" : "Transaction Report",
+  "fileName" : "FAILED",
+  "filePath" : "",
+  "generatedAt" : 1766239366808,
+  "status" : "FAILED",
+  "rowCount" : 0,
+  "fileSizeBytes" : 0,
+  "errorMessage" : "Authentication failed"
 } ]
