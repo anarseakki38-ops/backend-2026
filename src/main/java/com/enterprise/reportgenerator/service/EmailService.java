@@ -22,9 +22,24 @@ public class EmailService {
     @Value("${spring.mail.username:sender@example.com}")
     private String senderEmail;
 
+    @Value("${app.email.mock:false}")
+    private boolean mockEmail;
+
     public void sendReportEmail(List<String> recipients, String subject, String body, File attachment) {
         if (recipients == null || recipients.isEmpty()) {
             log.warn("No recipients defined for email.");
+            return;
+        }
+
+        if (mockEmail) {
+            log.info("============== MOCK EMAIL SENT ==============");
+            log.info("To: {}", recipients);
+            log.info("Subject: {}", subject);
+            log.info("Body: {}", body);
+            if (attachment != null) {
+                log.info("Attachment: {}", attachment.getName());
+            }
+            log.info("============================================");
             return;
         }
 
@@ -43,8 +58,9 @@ public class EmailService {
 
             mailSender.send(message);
             log.info("Email sent to {}", recipients);
-        } catch (MessagingException e) {
+        } catch (MessagingException | org.springframework.mail.MailException e) {
             log.error("Failed to send email", e);
+            throw new RuntimeException("Email Send Failed: " + e.getMessage(), e);
         }
     }
 }

@@ -77,6 +77,10 @@ public class SecurityConfig {
                                                                 org.springframework.security.web.util.matcher.AntPathRequestMatcher
                                                                                 .antMatcher("/api/ping"))
                                                 .permitAll()
+                                                .requestMatchers(
+                                                                org.springframework.security.web.util.matcher.AntPathRequestMatcher
+                                                                                .antMatcher("/api/test/**"))
+                                                .permitAll()
                                                 .anyRequest().authenticated())
                                 .sessionManagement(session -> session
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))

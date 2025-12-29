@@ -1,14 +1,4 @@
 [ {
-  "id" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
-  "name" : "Transaction Report",
-  "cronExpression" : "0 22 14 * * ?",
-  "sqlFileName" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16.txt",
-  "sqlContent" : "select * from customer",
-  "emailEnabled" : true,
-  "emailRecipients" : [ "ama@prodevans.com" ],
-  "enabled" : true,
-  "dashboardMapping" : null
-}, {
   "id" : "3853f93f-2cbe-483b-acb3-ff8f0e8f5f65",
   "name" : "Wallet Customer",
   "cronExpression" : "0 0 12 * * ?",
@@ -26,6 +16,16 @@
   "sqlContent" : null,
   "emailEnabled" : true,
   "emailRecipients" : [ "anarseakki38@gmail.com" ],
+  "enabled" : true,
+  "dashboardMapping" : null
+}, {
+  "id" : "aa75a173-51a4-4d72-8dc1-5b3072e8da16",
+  "name" : "Transaction Report",
+  "cronExpression" : "0 22 14 * * ?",
+  "sqlFileName" : null,
+  "sqlContent" : null,
+  "emailEnabled" : true,
+  "emailRecipients" : [ "ama@prodevans.com" ],
   "enabled" : true,
   "dashboardMapping" : null
 } ]

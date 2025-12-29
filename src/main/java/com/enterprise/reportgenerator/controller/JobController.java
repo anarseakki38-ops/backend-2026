@@ -119,4 +119,26 @@ public class JobController {
         new Thread(() -> jobExecutionService.executeJob(id)).start();
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/{id}/email")
+    public ResponseEntity<?> resendEmail(@PathVariable String id) {
+        try {
+            jobExecutionService.resendLastReportEmail(id);
+            return ResponseEntity.ok().build();
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.notFound().build();
+        } catch (IllegalStateException e) {
+            return ResponseEntity.badRequest().body(java.util.Collections.singletonMap("error", e.getMessage()));
+        } catch (RuntimeException e) {
+            // Handle the wrapped email exception
+            String msg = e.getMessage();
+            if (e.getCause() != null && e.getCause().getMessage() != null) {
+                msg = e.getCause().getMessage();
+            }
+            if (msg.contains("Authentication failed") || msg.contains("535")) {
+                msg = "Email Authentication Failed. Please check your application.properties settings.";
+            }
+            return ResponseEntity.internalServerError().body(java.util.Collections.singletonMap("error", msg));
+        }
+    }
 }

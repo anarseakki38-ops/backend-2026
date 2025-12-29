@@ -135,4 +135,45 @@ public class JobExecutionService {
         reportRepository.saveReport(report);
         log.warn("Failed report saved: {}", reportId);
     }
+
+    public void resendLastReportEmail(String jobId) {
+        log.info("Request to resend last report email for Job ID: {}", jobId);
+        Optional<JobConfig> jobOpt = jobRepository.findById(jobId);
+        if (!jobOpt.isPresent()) {
+            throw new IllegalArgumentException("Job not found: " + jobId);
+        }
+        JobConfig job = jobOpt.get();
+
+        if (!job.isEmailEnabled() || job.getEmailRecipients() == null || job.getEmailRecipients().isEmpty()) {
+            throw new IllegalStateException("Email is not enabled or no recipients configured for this job.");
+        }
+
+        List<Report> reports = reportRepository.findByJobId(jobId);
+        Optional<Report> lastReportOpt = reports.stream()
+                .filter(r -> "SUCCESS".equals(r.getStatus()))
+                .sorted((r1, r2) -> Long.compare(r2.getGeneratedAt(), r1.getGeneratedAt())) // Descending
+                .findFirst();
+
+        if (!lastReportOpt.isPresent()) {
+            throw new IllegalStateException("No successful reports found for this job.");
+        }
+
+        Report lastReport = lastReportOpt.get();
+        File reportFile = new File(lastReport.getFilePath());
+
+        if (!reportFile.exists()) {
+            throw new IllegalStateException("Report file not found on disk: " + lastReport.getFilePath());
+        }
+
+        emailService.sendReportEmail(
+                job.getEmailRecipients(),
+                "RESENT: Report Generated: " + job.getName(),
+                "This is a manually triggered resend of the last generated report for " + job.getName()
+                        + ".\nGenerated at: "
+                        + LocalDateTime.ofInstant(java.time.Instant.ofEpochMilli(lastReport.getGeneratedAt()),
+                                java.time.ZoneId.systemDefault()),
+                reportFile);
+
+        log.info("Resent email for report: {}", lastReport.getId());
+    }
 }

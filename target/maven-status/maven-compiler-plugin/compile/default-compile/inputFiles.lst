@@ -8,6 +8,8 @@ C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\ma
 C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\controller\JobController.java
 C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\controller\PingController.java
 C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\controller\ReportController.java
+C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\controller\TestEmailController.java
+C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\controller\UserManagementController.java
 C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\model\JobConfig.java
 C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\model\MetricConfig.java
 C:\Users\acer\.gemini\antigravity\scratch\oracle-report-generator\backend\src\main\java\com\enterprise\reportgenerator\model\MetricHistory.java
