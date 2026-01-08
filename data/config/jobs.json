@@ -1,0 +1,14 @@
+[ {
+  "id" : "fe76fae6-606f-40dc-bc09-8ba576fa7d07",
+  "name" : "Customer Registration Granual Details",
+  "cronExpression" : "0 0 12 * * ?",
+  "sqlFileName" : "fe76fae6-606f-40dc-bc09-8ba576fa7d07.txt",
+  "sqlContent" : "select circlename as \"CIRCLE\",NETWORK as \"NETWORK\",MODULENAME as \"MODULE\",REGION as \"REGION\",to_number(a.BRANCH) as BRCD, BRNAME as \"BRANCH  NAME\",t.wallet_address \"Wallet Id\",        t.created \"Wallet Created Date\",        t.name \"Name\",        t.mobile \"Mobile Number\",        t.vpa \"VPA\",        t.email \"email\",        t.kyc_status  \"Kyc Status\"  from (select * from customer where status='V'    and   type = 'CUSTODIAN' and nvl(is_merchant,'N') != 'Y' and (trunc(created) between  :FromDate and :ToDate)) t , (select * from  customer_account where is_linked='Y' ) a ,brmst b  where (t.id=a.customer) and a.BRANCH=lpad(b.brcd,5,'0')   Order by 1,2,3,4,5 desc",
+  "emailEnabled" : true,
+  "emailRecipients" : [ "anarseakki@gmail.com" ],
+  "enabled" : true,
+  "targetDatabase" : "PRIMARY",
+  "fromDate" : "2025-07-31",
+  "toDate" : "2025-12-29",
+  "dashboardMapping" : null
+} ]
